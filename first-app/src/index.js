@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import { register } from './serviceWorker'
 
-ReactDOM.render(
-    <App />, document.querySelector('#root')
-)
+if (document.querySelector('#root')) {
+
+    ReactDOM.render(
+        <App/>, document.querySelector('#root')
+    )
+}
 register()
